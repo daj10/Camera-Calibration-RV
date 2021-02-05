@@ -8,7 +8,7 @@ import numpy as np
 CHECKERBOARD = (8, 6)
 criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
 
-# liste pour stocker les points d'objet 3D pour chaque image de damier dans l'espace du monde réel
+# Liste pour stocker les points d'objet 3D pour chaque image de damier dans l'espace du monde réel
 objpoints = []
 # liste pour stocker les points d'image 2D pour chaque image de damier dans le plan image
 imgpoints = []
@@ -17,7 +17,7 @@ imgpoints = []
 objp = np.zeros((1, CHECKERBOARD[0] * CHECKERBOARD[1], 3), np.float32)
 objp[0, :, :2] = np.mgrid[0:CHECKERBOARD[0], 0:CHECKERBOARD[1]].T.reshape(-1, 2)
 
-# Source data
+# Données Images
 data = glob.glob('data/GO*.jpg')
 
 # Parcourir la liste et cherchez les coins de l'échiquier
