@@ -4,7 +4,7 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Définir les dimensions du damier
+# Définir les dimensions de échiquier
 CHECKERBOARD = (8, 6)
 criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
 
@@ -20,7 +20,7 @@ objp[0, :, :2] = np.mgrid[0:CHECKERBOARD[0], 0:CHECKERBOARD[1]].T.reshape(-1, 2)
 # Source data
 data = glob.glob('data/GO*.jpg')
 
-# Step through the list and search for chessboard corners
+# Parcourir la liste et cherchez les coins de l'échiquier
 for idx, fname in enumerate(data):
     img = cv2.imread(fname)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
