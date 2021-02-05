@@ -25,7 +25,7 @@ for idx, fname in enumerate(data):
     img = cv2.imread(fname)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # Detecter automatiquement les coins -> findChessbordCorners
-    # Si le nombre de coins souhaité est trouvé dans l'image, alors ret = vrai
+    # Si le nombre de coins souhaité est trouvé dans l'image, ret = vrai
     ret, corners = cv2.findChessboardCorners(gray, CHECKERBOARD,
                                              cv2.CALIB_CB_ADAPTIVE_THRESH + cv2.CALIB_CB_FAST_CHECK +
                                              cv2.CALIB_CB_NORMALIZE_IMAGE)
